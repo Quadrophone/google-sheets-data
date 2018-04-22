@@ -1,0 +1,22 @@
+{
+  "name": "google-sheets-data",
+  "version": "0.1.0",
+  "description": "Pull data from Google Sheets",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Quadrophone/google-sheets-data.git"
+  },
+  "keywords": [
+    "Google",
+    "Sheets"
+  ],
+  "author": "James Podles",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Quadrophone/google-sheets-data/issues"
+  },
+  "homepage": "https://github.com/Quadrophone/google-sheets-data#readme",
+  "dependencies": {}
+}
