@@ -1,7 +1,7 @@
 'use strict';
 
 var processData =  function(data) {
-    data = JSON.parse(data);
+    if (typeof data !== 'object') data = JSON.parse(data);
     data = data.feed.entry;
 
     data = data.map(function(d) {
@@ -45,7 +45,6 @@ module.exports = {
 
                 function jsonp(url, callback) {
                     var callbackName = "jsonp_callback_" + Math.round(100000 * Math.random());
-
                     window[callbackName] = function(data) {
                         delete window[callbackName];
                         document.body.removeChild(script);
@@ -59,7 +58,7 @@ module.exports = {
                 }
 
                 jsonp(url, function(data) {
-                    data = processData(data.feed.entry);
+                    data = processData(data);
                     resolve(data);
                 });
             }
